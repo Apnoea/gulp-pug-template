@@ -1,0 +1,21 @@
+block variables
+include ../mixins/mixins
+
+doctype html
+html(lang="ru")
+  block head
+    head
+      meta(charset="utf-8")
+      title=pageTitle
+      meta(content="width=device-width, initial-scale=1" name="viewport")
+      meta(content="ie=edge" http-equiv="x-ua-compatible")
+      link(rel="stylesheet" href="css/style.min.css")
+  body
+    .wrapper
+      block header
+        include header
+      block content
+      block footer
+        include footer
+      block scripts
+        script(src='/js/scripts.js')

@@ -1,0 +1,40 @@
+@import '../../node_modules/swiper/swiper.scss';
+@import '../../node_modules/fancybox/dist/scss/jquery.fancybox';
+@import '../../node_modules/normalize.css/normalize';
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+
+  .wrapper {
+    position: relative;
+    max-width: 1920px;
+    min-height: 100vh;
+    margin: 0 auto;
+
+    .inner {
+      margin: 0 auto;
+    }
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+}

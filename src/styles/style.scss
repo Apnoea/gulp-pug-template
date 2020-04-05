@@ -1,0 +1,9 @@
+@import 'common/header';
+@import 'common/global';
+@import 'common/footer';
+
+.wrapper {
+  .inner {
+    max-width: 1400px;
+  }
+}

@@ -1,0 +1,23 @@
+extends common/layout
+
+block variables
+  -var pageTitle='Главная'
+
+block content
+  main
+    .inner
+      h2 Title
+      include includes/index/banner
+      hr
+      p paragraph
+      .swiper-container
+        .swiper-wrapper
+          .swiper-slide Slide 1
+          .swiper-slide Slide 2
+          .swiper-slide Slide 3
+        .swiper-pagination
+        .swiper-button-prev
+        .swiper-button-next
+
+      +icon('icon_ok')
+      +icon('icon_vk')
