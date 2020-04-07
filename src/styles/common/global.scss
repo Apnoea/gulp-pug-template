@@ -1,40 +1,43 @@
 @import '../../node_modules/swiper/css/swiper.css';
 @import '../../node_modules/fancybox/dist/css/jquery.fancybox.css';
 @import '../../node_modules/normalize.css/normalize';
+@import '../utils/fonts';
+@import '../utils/variables';
+
 
 *,
 *::before,
 *::after {
   box-sizing: inherit;
 }
-
 html {
   box-sizing: border-box;
 }
-
 body {
   margin: 0;
-
   .wrapper {
     position: relative;
     max-width: 1920px;
     min-height: 100vh;
     margin: 0 auto;
-
+    font-family: $font;
+    color: $black;
     .inner {
       margin: 0 auto;
     }
   }
 }
-
 img {
   max-width: 100%;
 }
-
+svg {
+  max-width: 100%;
+}
 a {
   text-decoration: none;
 }
-
 ul {
   margin: 0;
+  padding: 0;
+  list-style: none;
 }

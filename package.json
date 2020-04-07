@@ -1,6 +1,6 @@
 {
   "name": "gulp-pug-template",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An App",
   "main": "gulpfile.js",
   "scripts": {
@@ -11,7 +11,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Apnoea/gulp-template.git"
+    "url": "https://github.com/Apnoea/gulp-pug-template.git"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",

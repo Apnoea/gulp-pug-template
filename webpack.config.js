@@ -1,7 +1,10 @@
+const path = require('path');
+
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   output: {
-    filename: "scripts.js"
+    path: path.resolve(__dirname, 'build'),
+    filename: 'scripts.js'
   },
   module: {
     rules: [

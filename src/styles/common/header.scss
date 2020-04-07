@@ -1,4 +1,38 @@
 @import '../mixins/media';
 
-header {
+.header {
+  padding: 20px 0;
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-logo {
+    width: 150px;
+    a {
+      display: block;
+      svg {
+        height: 50px;
+      }
+    }
+  }
+  &-menu {
+    position: absolute;
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+    &-item {
+      margin-right: 25px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  &-mb {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    background: #000;
+    border-radius: 50%;
+  }
 }
