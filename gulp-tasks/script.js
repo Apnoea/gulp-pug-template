@@ -6,7 +6,7 @@ const gulp = require('gulp'),
   rename = require('gulp-rename')
 
 module.exports = function script() {
-  return gulp.src('src/js/main.js')
+  return gulp.src('src/js/**/*.js')
     .pipe(webpack(webpackConfig))
     .pipe(eslint())
     .pipe(eslint.format())

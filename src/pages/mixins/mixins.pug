@@ -2,3 +2,10 @@ mixin icon(iconName)
   - mod = mod || ''
     svg(class="icon icon-" + iconName)
       use(xlink:href="img/sprite.svg#" + iconName)
+
+mixin itemsBlock(json)
+  each data, index in json
+    div(class=data.name + '-block-item')
+      div(class=data.items.name + '-block-item-title') #{data.items.title}
+      div(class=data.name + '-block-item-image')
+        img(src="img/" + data.name + '_img' + index + ".jpg", alt="")

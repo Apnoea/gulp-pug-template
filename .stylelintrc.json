@@ -29,8 +29,12 @@
     "unit-whitelist": [
       "em",
       "rem",
+      "deg",
+      "fr",
       "%",
+      "s",
       "px",
+      "vw",
       "vh",
       "vm",
       "vmax",

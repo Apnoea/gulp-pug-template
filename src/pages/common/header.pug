@@ -1,13 +1,16 @@
+-
+  var headerMenu =[
+    {name: 'Главная', link: '/'},
+    {name: 'Каталог', link: '/'},
+    {name: 'О нас', link: 'about.html'}]
+
 header.header
   .inner
     .header-logo
       a(href="/")
         +icon('icon_logo')
     ul.header-menu
-      li.header-menu-item
-        a(href="/") Главная
-      li.header-menu-item
-        a(href="#") Каталог
-      li.header-menu-item
-        a(href="/about.html") О нас
+      each item in headerMenu
+        li.header-menu-item
+          a(href=item.link)=item.name
     .header-mb

@@ -1,6 +1,7 @@
 @import '../../node_modules/swiper/css/swiper.css';
 @import '../../node_modules/fancybox/dist/css/jquery.fancybox.css';
 @import '../../node_modules/normalize.css/normalize';
+@import '../mixins/media';
 @import '../utils/fonts';
 @import '../utils/variables';
 
@@ -10,8 +11,12 @@
 *::after {
   box-sizing: inherit;
 }
+*:focus {
+  outline: none;
+}
 html {
   box-sizing: border-box;
+  line-height: 1;
 }
 body {
   margin: 0;
@@ -28,16 +33,41 @@ body {
   }
 }
 img {
+  display: block;
   max-width: 100%;
 }
 svg {
   max-width: 100%;
 }
 a {
+  display: block;
+  height: 100%;
   text-decoration: none;
+  color: $black;
+  transition: ease 0.3s;
 }
 ul {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre,
+span,
+ul,
+ol,
+li,
+tr,
+td,
+th,
+table,
+blockquote {
+  margin: 0;
+  padding: 0;
 }

@@ -2,16 +2,18 @@
 @import 'common/global';
 @import 'common/footer';
 
-.wrapper {
-  .inner {
-    max-width: 1400px;
-    div {
-      p {
-        font: 300 18px/1.5 $font;
+body {
+  .wrapper {
+    .inner {
+      max-width: 1400px;
+      div {
+        p {
+          font: 300 18px/1.5 $font;
+        }
       }
-    }
-    .swiper-container {
-      height: 200px;
+      .swiper-container {
+        height: 200px;
+      }
     }
   }
 }
