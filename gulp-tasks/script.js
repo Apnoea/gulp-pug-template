@@ -2,7 +2,6 @@ const gulp = require('gulp'),
   webpack = require('webpack-stream'),
   webpackConfig = require('../webpack.config.js'),
   eslint = require('gulp-eslint'),
-  babel = require('gulp-babel'),
   rename = require('gulp-rename')
 
 module.exports = function script() {
@@ -10,9 +9,6 @@ module.exports = function script() {
     .pipe(webpack(webpackConfig))
     .pipe(eslint())
     .pipe(eslint.format())
-    .pipe(babel({
-      presets: ['@babel/env']
-    }))
     .pipe(rename('scripts.js'))
     .pipe(gulp.dest('build/js'))
 }

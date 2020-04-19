@@ -1,6 +1,6 @@
 {
   "name": "gulp-pug-template",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "An App",
   "main": "gulpfile.js",
   "scripts": {
@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
     "babel-loader": "^8.1.0",
     "browser-sync": "^2.26.7",
     "del": "^5.1.0",
@@ -28,7 +28,6 @@
     "eslint-plugin-standard": "^4.0.1",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
-    "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-eslint": "^6.0.0",
     "gulp-imagemin": "^7.1.0",
@@ -52,9 +51,8 @@
     "webpack-stream": "^5.2.1"
   },
   "dependencies": {
-    "fancybox": "^3.0.1",
+    "@fancyapps/fancybox": "^3.5.7",
     "jquery": "^3.4.1",
-    "jquery-ui": "^1.12.1",
     "normalize.css": "^8.0.1",
     "swiper": "^5.3.6"
   }

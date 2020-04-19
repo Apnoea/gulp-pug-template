@@ -1,7 +1,8 @@
 import $ from "jquery";
+import '@fancyapps/fancybox';
 import Swiper from "swiper";
 
-$(document).ready(function() {
+$(document).ready(() => {
   svg4everybody();
 
   var mySwiper = new Swiper('.swiper-container', {

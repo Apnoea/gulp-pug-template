@@ -1,7 +1,7 @@
 # gulp-pug-template
 
 ## Установка
-* установите [NodeJS](https://nodejs.org/en/) (если требуется) и [Yarn](https://yarnpkg.com/en/docs/install)
+* установите [Node.js](https://nodejs.org/en/) (если требуется) и [Yarn](https://yarnpkg.com/en/docs/install)
 * скачайте сборку в консоли с помощью [Git](https://git-scm.com/downloads): ```git clone https://github.com/Apnoea/gulp-pug-template.git```
 * установите ```gulp``` глобально: ```yarn global add gulp-cli```
 * перейдите в скачанную папку со сборкой: ```cd gulp-pug-template```
