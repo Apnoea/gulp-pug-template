@@ -22,8 +22,7 @@ module.exports = function styles() {
     .pipe(sass())
     .pipe(autoprefixer({
       cascade: false,
-      grid: true,
-      overrideBrowserslist: ['>5%', 'last 2 versions']
+      grid: true
     }))
     .pipe(shorthand())
     .pipe(cleanCSS({

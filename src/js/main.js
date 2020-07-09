@@ -1,9 +1,13 @@
 import $ from "jquery";
 import '@fancyapps/fancybox';
+import Inputmask from 'inputmask';
+import 'nouislider';
+import 'select2';
 import Swiper from "swiper";
+import 'tooltipster';
 
 $(document).ready(() => {
-  svg4everybody();
+  $('select').select2();
 
   var mySwiper = new Swiper('.swiper-container', {
     speed: 400,
