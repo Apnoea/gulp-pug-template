@@ -15,5 +15,67 @@ body {
         height: 200px;
       }
     }
+    main {
+      .breadcrumbs {
+        margin-bottom: 20px;
+        @include media-tablet-horizontal {
+          overflow-y: auto;
+        }
+        &-block {
+          display: flex;
+          align-items: center;
+          &-item {
+            position: relative;
+            margin-right: 5px;
+            padding-right: 10px;
+            font-size: 14px;
+            white-space: nowrap;
+            &::after {
+              content: '';
+              position: absolute;
+              right: 0;
+              top: 50%;
+              transform: translateY(-50%);
+              width: 6px;
+              height: 1px;
+              background: #aaa;
+            }
+            @include media-tablet {
+              font-size: 12px;
+            }
+            &-link {
+              color: #575757;
+              &:hover {
+                color: red;
+              }
+            }
+            span {
+              color: #aaa;
+            }
+            &:last-child {
+              margin-right: 0;
+              padding-right: 0;
+              &::after {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+      .page_title {
+        margin-bottom: 30px;
+        h1 {
+          margin-bottom: inherit;
+          font: 32px/1.1 $font;
+        }
+      }
+      .section_title {
+        margin-bottom: 20px;
+        h2 {
+          margin-bottom: inherit;
+          font: 24px/1.1 $font;
+        }
+      }
+    }
   }
 }

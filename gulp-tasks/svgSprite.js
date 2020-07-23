@@ -4,7 +4,7 @@ const gulp = require('gulp'),
   rename = require('gulp-rename')
 
 module.exports = function svgSprite() {
-  return gulp.src('src/images/*.svg')
+  return gulp.src('src/images/sprite/*.svg')
     .pipe(imagemin([
       imagemin.svgo({
         plugins: [

@@ -1,6 +1,6 @@
 {
   "name": "gulp-pug-template",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "description": "An App",
   "main": "gulpfile.js",
   "scripts": {

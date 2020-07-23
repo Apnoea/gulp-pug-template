@@ -22,3 +22,5 @@ $(document).ready(() => {
     },
   });
 });
+
+import './_backend.js'

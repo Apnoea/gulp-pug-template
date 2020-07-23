@@ -3,9 +3,20 @@ mixin icon(iconName)
     svg(class="icon icon-" + iconName)
       use(xlink:href="img/sprite.svg#" + iconName)
 
-mixin itemsBlock(json)
-  each data, index in json
-    div(class=data.name + '-block-item')
-      div(class=data.items.name + '-block-item-title') #{data.items.title}
-      div(class=data.name + '-block-item-image')
-        img(src="img/" + data.name + '_img' + index + ".jpg", alt="")
+mixin breadcrumbs( ...list)
+  .breadcrumbs
+    ul.breadcrumbs-block
+      each item, index in list
+        li.breadcrumbs-block-item
+          if index === list.length - 1
+            span=item
+          else
+            a.breadcrumbs-block-item-link(href="/")=item
+
+mixin pageTitle(pageTitle)
+  .page_title
+    h1=pageTitle
+
+mixin sectionTitle(sectionTitle)
+  .section_title
+    h2=sectionTitle

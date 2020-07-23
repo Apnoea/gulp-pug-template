@@ -6,21 +6,20 @@ block variables
 block content
   main
     .inner
-      .top_banner
-        .top-banner-content
-        .top-banner-image
-      section.services
-        h2 Title
-        .services-block
-      p paragraph
-      .swiper-container
-        .swiper-wrapper
-          .swiper-slide Slide 1
-          .swiper-slide Slide 2
-          .swiper-slide Slide 3
-        .swiper-pagination
-        .swiper-button-prev
-        .swiper-button-next
+      +breadcrumbs('Главная')
+      +pageTitle('Главная')
+      section.info
+        +sectionTitle('Info')
+      section.slider
+        +sectionTitle('Slider')
+        .swiper-container
+          .swiper-wrapper
+            .swiper-slide Slide 1
+            .swiper-slide Slide 2
+            .swiper-slide Slide 3
+          .swiper-pagination
+          .swiper-button-prev
+          .swiper-button-next
 
       +icon('icon_ok')
       +icon('icon_vk')
