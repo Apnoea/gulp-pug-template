@@ -20,3 +20,14 @@ mixin pageTitle(pageTitle)
 mixin sectionTitle(sectionTitle)
   .section_title
     h2=sectionTitle
+
+mixin ui-checkbox(id, text)
+  .ui-checkbox
+    input(id=id type="checkbox" name=id)
+    label(for=id)=text
+
+mixin ui-select( ...data)
+  .ui-select
+    select
+      each item in data
+        option=item

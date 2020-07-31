@@ -20,6 +20,30 @@ block content
           .swiper-pagination
           .swiper-button-prev
           .swiper-button-next
+      section.uis
+        +sectionTitle('UI Section')
+        .container
+          .container-item
+            h3 Select
+            +ui-select('Option 1', 'Option 2', 'Option 3', 'Option 4')
+          .container-item
+            h3 Checkbox
+            +ui-checkbox('id', 'I love semolina')
+      section.gallery
+        +sectionTitle('Gallery')
+        .container
+          .container-item
+            a(href="/img/swim1.jpg" data-fancybox="gallery")
+              img(src="/img/swim1.jpg", alt="")
+          .container-item
+            a(href="/img/swim2.jpg" data-fancybox="gallery")
+              img(src="/img/swim2.jpg", alt="")
+          .container-item
+            a(href="/img/swim3.jpg" data-fancybox="gallery")
+              img(src="/img/swim3.jpg", alt="")
+          .container-item
+            a(href="/img/swim4.jpg" data-fancybox="gallery")
+              img(src="/img/swim4.jpg", alt="")
 
       +icon('icon_ok')
       +icon('icon_vk')

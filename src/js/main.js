@@ -7,7 +7,9 @@ import Swiper from "swiper";
 import 'tooltipster';
 
 $(document).ready(() => {
-  $('select').select2();
+  $('select').select2({
+    minimumResultsForSearch: -1
+  });
 
   var mySwiper = new Swiper('.swiper-container', {
     speed: 400,

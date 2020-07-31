@@ -24,7 +24,7 @@ module.exports = function styles() {
       cascade: false,
       grid: true
     }))
-    .pipe(shorthand())
+    // .pipe(shorthand())
     .pipe(cleanCSS({
       debug: true,
       compatibility: '*'

@@ -41,7 +41,7 @@ gulp-pug-template
     * шрифты: ```src/fonts```
     * изображения: ```src/images```
     * JS-файлы: ```src/js```
-    * страницы сайта: ```src/views/pages```
+    * страницы сайта: ```src/pages```
     * SCSS-файлы: ```src/styles```
 
 ## Команды
