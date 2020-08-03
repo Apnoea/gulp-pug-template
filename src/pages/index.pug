@@ -14,9 +14,12 @@ block content
         +sectionTitle('Slider')
         .swiper-container
           .swiper-wrapper
-            .swiper-slide Slide 1
-            .swiper-slide Slide 2
-            .swiper-slide Slide 3
+            .swiper-slide
+              +icon('icon_vk')
+            .swiper-slide
+              +icon('icon_ok')
+            .swiper-slide
+              +icon('icon_snow')
           .swiper-pagination
           .swiper-button-prev
           .swiper-button-next
@@ -44,6 +47,3 @@ block content
           .container-item
             a(href="/img/swim4.jpg" data-fancybox="gallery")
               img(src="/img/swim4.jpg", alt="")
-
-      +icon('icon_ok')
-      +icon('icon_vk')

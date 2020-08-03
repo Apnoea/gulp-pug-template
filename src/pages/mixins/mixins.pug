@@ -1,6 +1,6 @@
 mixin icon(iconName)
   -mod = mod || ''
-    svg(class="icon icon-" + iconName)
+    svg(class="icon " + iconName)
       use(xlink:href="img/sprite.svg#" + iconName)
 
 mixin breadcrumbs( ...list)
