@@ -1,9 +1,9 @@
 const del = require('del'),
-  cache = require('gulp-cache')
+  cached = require('gulp-cached')
 
 module.exports = function clean(cb) {
   return del('build/*').then(() => {
-    cache.clearAll()
+    cached.caches = {};
     cb()
   })
 }
