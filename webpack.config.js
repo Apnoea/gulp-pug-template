@@ -1,5 +1,5 @@
-const path = require('path');
-const webpack = require('webpack');
+const path = require('path'),
+  webpack = require('webpack');
 
 module.exports = {
   mode: 'production',
@@ -10,7 +10,11 @@ module.exports = {
   plugins: [
     new webpack.ProvidePlugin({
       '$': 'jquery',
-      'jQuery': 'jquery'
+      'window.$': 'jquery',
+      'jQuery': 'jquery',
+      'window.jQuery': 'jquery',
+      'jquery': 'jquery',
+      'window.jquery': 'jquery'
     })
   ],
   module: {

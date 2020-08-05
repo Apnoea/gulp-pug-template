@@ -3,8 +3,9 @@ import '@fancyapps/fancybox';
 import Inputmask from 'inputmask';
 import 'nouislider';
 import 'select2';
-import Swiper from "swiper";
+import Swiper from 'swiper/bundle';
 import 'tooltipster';
+import './_backend';
 
 $(document).ready(() => {
   $('select').select2({
@@ -24,5 +25,3 @@ $(document).ready(() => {
     },
   });
 });
-
-import './_backend.js'

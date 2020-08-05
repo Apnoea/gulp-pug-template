@@ -61,11 +61,11 @@
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
     "inputmask": "^5.0.3",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.1",
     "normalize.css": "^8.0.1",
     "nouislider": "^14.6.0",
     "select2": "^4.0.13",
-    "swiper": "^5.3.6",
+    "swiper": "^6.1.1",
     "tooltipster": "^4.2.8"
   }
 }
