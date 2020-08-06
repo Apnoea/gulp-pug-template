@@ -1,6 +1,6 @@
 {
   "name": "gulp-pug-template",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "simple pug+scss template",
   "main": "gulpfile.js",
   "scripts": {
@@ -48,6 +48,7 @@
     "gulp-stylelint": "^13.0.0",
     "gulp-svg-sprite": "^1.5.0",
     "gulp-w3c-html-validator": "^2.0.0",
+    "imagemin-pngquant": "^9.0.0",
     "pug": "^2.0.4",
     "stylelint": "^13.3.0",
     "stylelint-config-htmlacademy": "^0.1.4",
