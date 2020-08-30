@@ -1,0 +1,36 @@
+body {
+  .wrapper {
+    main {
+      .main-page {
+        padding-top: 50px;
+        padding-bottom: 70px;
+        .container {
+          display: flex;
+          justify-content: space-around;
+          &-item {
+            h3 {
+              margin-bottom: 10px;
+            }
+          }
+        }
+        .swiper-slide {
+          .icon {
+            transition: 0.3s ease;
+            &:hover {
+              color: teal;
+            }
+          }
+        }
+        .ui-pagination {
+          margin-top: 40px;
+          @include media-laptop {
+            margin-top: 30px;
+          }
+          @include media-tablet {
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+}

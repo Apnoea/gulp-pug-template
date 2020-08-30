@@ -1,16 +1,43 @@
 -
   var headerMenu =[
-    {name: 'Главная', link: '/'},
-    {name: 'Каталог', link: '/'},
-    {name: 'О нас', link: 'about.html'}]
+    { title: 'Services',
+      item: [
+        { name: 'Unit Calculator', link: 'services.html' },
+        { name: 'Transportation', link: 'services.html' },
+        { name: 'Shelving', link: 'services.html' },
+        { name: 'Packing materials', link: 'services.html' },
+        { name: 'Insurance', link: 'services.html' }
+      ]
+    },
+    { title: 'Prices', link: 'prices.html' },
+    { title: 'About us',
+      item: [
+        { name: 'SmartBox', link: 'smartbox.html' },
+        { name: 'Team', link: 'team.html' },
+        { name: 'News', link: 'news.html' },
+        { name: 'Gallery', link: 'gallery.html' },
+        { name: 'Contacts', link: 'contacts.html' }
+      ]
+    },
+    { title: 'FAQ', link: 'faq.html' }
+  ]
 
 header.header
   .inner
     .header-logo
       a(href="/")
         +icon('icon_logo')
-    ul.header-menu
-      each item in headerMenu
-        li.header-menu-item
-          a(href=item.link)=item.name
-    .header-mb
+    .header-menu
+      each headerMenuItem, index in headerMenu
+        .header-menu-item
+          case index
+            when 1
+            when 3
+              .header-menu-item-title
+                a(href=headerMenuItem.link)=headerMenuItem.title
+            default
+              .header-menu-item-title.arrow=headerMenuItem.title
+              ul.header-menu-item-list
+                each headerMenuItemName in headerMenuItem.item
+                  li.header-menu-item-list-name
+                    a(href=headerMenuItemName.link)=headerMenuItemName.name

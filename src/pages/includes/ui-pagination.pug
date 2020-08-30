@@ -1,0 +1,15 @@
+.ui-pagination
+  a.ui-pagination-item.prev.disabled(href="#")
+    svg(xmlns="http://www.w3.org/2000/svg", width="8", height="12", viewbox="0 0 8 12")
+      path(fill="currentColor", d="M7.41 1.41L6 0 0 6l6 6 1.41-1.41L2.83 6z")
+  ul
+    each item, index in [1, 2, 3]
+      if index===0
+        li.active
+          a.ui-pagination-item(href="#")=item
+      else
+        li
+          a.ui-pagination-item(href="#")=item
+  a.ui-pagination-item.next(href="#")
+    svg(xmlns="http://www.w3.org/2000/svg", width="8", height="12", viewbox="0 0 8 12")
+      path(fill="currentColor", d="M7.41 1.41L6 0 0 6l6 6 1.41-1.41L2.83 6z")

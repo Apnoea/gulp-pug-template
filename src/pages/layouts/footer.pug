@@ -1,4 +1,42 @@
+-
+  var footerMenu =[
+    { title: 'Self storage',
+      item: [
+      { name: 'Why SmartBox', link: 'smartbox.html' },
+      { name: 'About SmartBox', link: 'smartbox.html' },
+      { name: 'FAQ', link: 'faq.html' }
+    ]},
+    { title: 'Discover',
+      item: [
+      { name: 'Booking', link: 'booking.html' },
+      { name: 'Contact', link: 'contacts.html' }
+    ]},
+    { title: 'Services',
+      item: [
+      { name: 'Unit calculator', link: 'services.html' },
+      { name: 'Transportation', link: 'services.html' },
+      { name: 'Shelving', link: 'services.html' },
+      { name: 'Packing materials', link: 'services.html' },
+      { name: 'Insurange', link: 'services.html' }
+    ]},
+    { title: 'General',
+      item: [
+      { name: 'News', link: 'news.html' },
+      { name: 'Gallery', link: 'gallery.html' },
+      { name: 'Team', link: 'team.html' }
+    ]}
+  ]
+
 footer.footer
   .inner
-    ul.footer-menu
-      li.footer-menu-item
+    .footer-logo
+      a(href="/")
+        +icon('icon_logo')
+    .footer-menu
+      each footerMenuItem in footerMenu
+        .footer-menu-item
+          .footer-menu-item-title=footerMenuItem.title
+          ul.footer-menu-item-list
+            each footerMenuItemName, index in footerMenuItem.item
+              li.footer-menu-item-list-name
+                a(href=footerMenuItemName.link)=footerMenuItemName.name

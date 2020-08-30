@@ -5,7 +5,8 @@ const gulp = require('gulp'),
   pug = require('gulp-pug'),
   cached = require('gulp-cached'),
   dependents = require('gulp-dependents'),
-  htmlValidator = require('gulp-w3c-html-validator');
+  htmlValidator = require('gulp-w3c-html-validator'),
+  browsersync = require('browser-sync')
 
 module.exports = function pug2html() {
   return gulp.src('src/pages/**/*.pug')
@@ -31,4 +32,5 @@ module.exports = function pug2html() {
     .pipe(pug({ pretty: true }))
     .pipe(htmlValidator())
     .pipe(gulp.dest('build'))
+    .pipe(browsersync.stream());
 }

@@ -1,46 +1,55 @@
 extends layouts/layout
 
 block variables
-  -var pageTitle ='Главная'
+  -var pageTitle ='Main'
 
 block content
   main
-    .inner
-      +breadcrumbs('Главная')
-      +pageTitle('Главная')
-      section.info
-        +sectionTitle('Info')
-      section.slider
-        +sectionTitle('Slider')
-        .swiper-container
-          .swiper-wrapper
-            .swiper-slide
-              +icon('icon_vk')
-            .swiper-slide
-              +icon('icon_ok')
-            .swiper-slide
-              +icon('icon_snow')
-          .swiper-pagination
-          .swiper-button-prev
-          .swiper-button-next
-      section.uis
-        +sectionTitle('UI Section')
-        .container
-          .container-item
-            h3 Select
-            +ui-select('Option 1', 'Option 2', 'Option 3', 'Option 4')
-          .container-item
-            h3 Checkbox
-            +ui-checkbox('id', 'I love semolina')
-      section.gallery
-        +sectionTitle('Gallery')
-        .container
-          .container-item
-            a(href="/img/fancy_img1.png" data-fancybox="gallery")
-              img(src="/img/fancy_img1.png", alt="")
-          .container-item
-            a(href="/img/fancy_img2.png" data-fancybox="gallery")
-              img(src="/img/fancy_img2.png", alt="")
-          .container-item
-            a(href="/img/fancy_img3.png" data-fancybox="gallery")
-              img(src="/img/fancy_img3.png", alt="")
+    .main-page
+      .inner
+        +breadcrumbs('Main', 'News')
+        +pageTitle('Main')
+        section.info
+          +sectionTitle('Info')
+        section.slider
+          +sectionTitle('Slider')
+          .swiper-container
+            .swiper-wrapper
+              .swiper-slide
+                +icon('icon_fb')
+              .swiper-slide
+                +icon('icon_ig')
+              .swiper-slide
+                +icon('icon_tt')
+            .swiper-pagination
+            .swiper-button-prev
+            .swiper-button-next
+        section.uis
+          +sectionTitle('UI Section')
+          .container
+            .container-item
+              h3 Buttons
+              +ui-button('Hollow')
+              +ui-button('Filled', 'filled')
+            .container-item
+              h3 Checkbox
+              +ui-checkbox('id', 'I love semolina')
+            .container-item
+              h3 Input
+              +ui-input('Phone', 'phone')
+            .container-item
+              h3 Select
+              +ui-select('Option 1', 'Option 2', 'Option 3', 'Option 4')
+        section.gallery
+          +sectionTitle('Gallery')
+          .container
+            .container-item
+              a(href="/img/fancy_img1.png" data-fancybox="gallery")
+                img(src="/img/fancy_img1.png", alt="")
+            .container-item
+              a(href="/img/fancy_img2.png" data-fancybox="gallery")
+                img(src="/img/fancy_img2.png", alt="")
+            .container-item
+              a(href="/img/fancy_img3.png" data-fancybox="gallery")
+                img(src="/img/fancy_img3.png", alt="")
+          include ./includes/ui-pagination

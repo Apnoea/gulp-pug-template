@@ -1,4 +1,4 @@
-build
-gulpfiles.js
+/build
+/gulp-tasks
 
-/gulp
+gulpfiles.js

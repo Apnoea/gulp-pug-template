@@ -5,10 +5,11 @@ const gulp = require('gulp'),
   autoprefixer = require('gulp-autoprefixer'),
   shorthand = require('gulp-shorthand'),
   rename = require('gulp-rename'),
-  cleanCSS = require('gulp-clean-css')
+  cleanCSS = require('gulp-clean-css'),
+  browsersync = require('browser-sync')
 
 module.exports = function styles() {
-  return gulp.src('src/styles/*.scss')
+  return gulp.src('src/styles/layouts/style.scss')
     .pipe(plumber())
     .pipe(gulpStylelint({
       failAfterError: false,
@@ -26,9 +27,11 @@ module.exports = function styles() {
     }))
     // .pipe(shorthand())
     .pipe(cleanCSS({
-      debug: true,
-      compatibility: '*'
+      compatibility: '*',
+      level: 2,
     }))
     .pipe(rename({ suffix: '.min' }))
+    .pipe(plumber.stop())
     .pipe(gulp.dest('build/css'))
+    .pipe(browsersync.stream())
 }

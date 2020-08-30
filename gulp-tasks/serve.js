@@ -4,12 +4,7 @@ const gulp = require('gulp'),
   styles = require('./styles'),
   script = require('./script'),
   pug2html = require('./pug2html'),
-  server = require('browser-sync').create()
-
-function readyReload(cb) {
-  server.reload()
-  cb()
-}
+  server = require('browser-sync')
 
 module.exports = function serve(cb) {
   server.init({
@@ -18,11 +13,11 @@ module.exports = function serve(cb) {
     cors: true
   })
 
-  gulp.watch('src/images/**/*.{gif,png,jpg,webp}', gulp.series(imageMinify)).on('end', server.reload)
-  gulp.watch('src/images/**/*.svg', gulp.series(svgSprite)).on('end', server.reload)
-  gulp.watch('src/styles/**/*.scss', gulp.series(styles, cb => gulp.src('build/css').pipe(server.stream()).on('end', cb)))
-  gulp.watch('src/js/**/*.js', gulp.series(script, cb => gulp.src('build/js').pipe(server.stream()).on('end', cb)))
-  gulp.watch('src/pages/**/*.pug', gulp.series(pug2html, readyReload))
+  gulp.watch('src/images/**/*.{gif,png,jpg,webp}', gulp.parallel(imageMinify))
+  gulp.watch('src/images/**/*.svg', gulp.parallel(svgSprite))
+  gulp.watch('src/styles/**/*.scss', gulp.parallel(styles))
+  gulp.watch('src/js/**/*.js', gulp.parallel(script))
+  gulp.watch('src/pages/**/*.pug', gulp.parallel(pug2html))
 
   return cb()
 }
