@@ -1,7 +1,7 @@
 import $ from 'jquery'
 import '@fancyapps/fancybox'
 import Inputmask from 'inputmask'
-import 'nouislider'
+import noUiSlider from 'nouislider'
 import 'parsleyjs'
 import 'select2'
 import Swiper from 'swiper/bundle'

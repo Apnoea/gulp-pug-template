@@ -1,5 +1,6 @@
 @import '/node_modules/normalize.css/normalize.css';
 @import '/node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css';
+@import '/node_modules/nouislider/distribute/nouislider.min.css';
 @import '/node_modules/select2/dist/css/select2.min.css';
 @import '/node_modules/swiper/swiper-bundle.min.css';
 @import '/node_modules/tooltipster/dist/css/tooltipster.main.min.css';
@@ -42,6 +43,9 @@ body {
       @include media-tablet {
         max-width: 100%;
         padding: 0 10px;
+      }
+      section {
+        margin-top: 50px;
       }
     }
   }
