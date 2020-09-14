@@ -1,11 +1,15 @@
 const path = require('path'),
-  webpack = require('webpack');
+  webpack = require('webpack')
 
 module.exports = {
-  mode: 'production',
+  mode: process.env.NODE_ENV,
+  entry: {
+    main: "./src/js/index.js",
+  },
   output: {
-    path: path.resolve(__dirname, 'build'),
-    filename: 'scripts.js'
+    filename: 'scripts.js',
+    chunkFilename: '[name].js',
+    publicPath: '/'
   },
   plugins: [
     new webpack.ProvidePlugin({
@@ -31,7 +35,19 @@ module.exports = {
       }
     ]
   },
+  optimization: process.env.NODE_ENV === 'development' ? {
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          name: 'vendors',
+          test: /node_modules/,
+          chunks: 'all',
+          enforce: true
+        }
+      }
+    }
+  } : {},
   performance: {
     hints: false
   }
-};
+}

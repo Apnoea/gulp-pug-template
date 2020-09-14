@@ -1,5 +1,6 @@
 {
   "plugins": [
+    "stylelint-order",
     "stylelint-scss"
   ],
   "extends": [
@@ -40,6 +41,26 @@
       "vm",
       "vmax",
       "vmin"
+    ],
+    "order/properties-order": [
+      {
+        "properties": [
+          "position",
+          "top",
+          "right",
+          "bottom",
+          "left",
+          "z-index"
+        ]
+      },
+      {
+        "properties": [
+          "width",
+          "height",
+          "margin",
+          "padding"
+        ]
+      }
     ]
   }
 }

@@ -1,12 +1,12 @@
 {
   "name": "gulp-pug-template",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "simple pug+scss template",
   "main": "gulpfile.js",
   "scripts": {
-    "start": "gulp start",
-    "script": "gulp script",
-    "build": "gulp build"
+    "start": "NODE_ENV=development gulp start",
+    "script": "NODE_ENV=production gulp script",
+    "build": "NODE_ENV=production gulp build"
   },
   "browserslist": [
     "> 5%",
@@ -55,9 +55,10 @@
     "stylelint-config-htmlacademy": "^0.1.4",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-config-standard-scss": "^1.1.0",
+    "stylelint-order": "^4.1.0",
     "stylelint-scss": "^3.16.0",
     "svg4everybody": "^2.1.9",
-    "webpack-cli": "^3.3.11",
+    "webpack": "^4.44.1",
     "webpack-stream": "^5.2.1"
   },
   "dependencies": {

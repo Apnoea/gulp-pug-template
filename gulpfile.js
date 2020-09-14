@@ -13,5 +13,5 @@ const dev = gulp.parallel(pug2html, styles, script, fonts, imageMinify, svgSprit
 const build = gulp.series(clean, dev)
 
 module.exports.start = gulp.series(build, serve)
-module.exports.script = gulp.task(script)
+module.exports.script = gulp.series(clean, script)
 module.exports.build = build
