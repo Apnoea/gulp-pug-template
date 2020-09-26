@@ -1,6 +1,7 @@
 const gulp = require('gulp'),
   plumber = require('gulp-plumber'),
   gulpStylelint = require('gulp-stylelint'),
+  sassGlob = require('gulp-sass-glob'),
   sass = require('gulp-sass'),
   autoprefixer = require('gulp-autoprefixer'),
   shorthand = require('gulp-shorthand'),
@@ -20,6 +21,7 @@ module.exports = function styles() {
         }
       ]
     }))
+    .pipe(sassGlob())
     .pipe(sass())
     .pipe(autoprefixer({
       cascade: false,

@@ -8,7 +8,7 @@ import Swiper from 'swiper/bundle'
 import 'tooltipster'
 import './_backend'
 
-$(document).ready(() => {
+$(function () {
   selects()
   inputMask()
   checkInputFill()

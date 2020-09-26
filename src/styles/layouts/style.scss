@@ -96,9 +96,9 @@ blockquote {
 
 // BLOCKS
 
-@import './header';
-@import './footer';
+@import './*';
+@import '../includes/*';
 
 // PAGES
 
-@import '../main';
+@import '../*';
