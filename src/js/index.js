@@ -1,4 +1,5 @@
 import $ from 'jquery'
+import datepicker from 'js-datepicker'
 import '@fancyapps/fancybox'
 import Inputmask from 'inputmask'
 import noUiSlider from 'nouislider'

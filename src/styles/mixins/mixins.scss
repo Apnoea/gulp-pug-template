@@ -2,80 +2,6 @@
 @import '../utils/fonts';
 @import '../utils/variables';
 
-.breadcrumbs {
-  margin-bottom: 20px;
-  @include media-tablet-horizontal {
-    overflow-y: auto;
-  }
-  &-block {
-    display: flex;
-    align-items: center;
-    &-item {
-      position: relative;
-      margin-right: 5px;
-      padding-right: 10px;
-      font-size: 14px;
-      white-space: nowrap;
-      &::after {
-        content: '';
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 6px;
-        height: 1px;
-        background: #aaa;
-      }
-      @include media-tablet {
-        font-size: 12px;
-      }
-      &-link {
-        color: #575757;
-        &:hover {
-          color: red;
-        }
-      }
-      span {
-        color: #aaa;
-      }
-      &:last-child {
-        margin-right: 0;
-        padding-right: 0;
-        &::after {
-          display: none;
-        }
-      }
-    }
-  }
-}
-.page_title {
-  margin-bottom: 30px;
-  font: 36px/1.1 $font;
-  @include media-laptop {
-    font-size: 28px;
-  }
-  @include media-tablet {
-    font-size: 20px;
-  }
-  h1 {
-    margin-bottom: inherit;
-    font: inherit;
-  }
-}
-.section_title {
-  margin-bottom: 20px;
-  font: 28px/1.1 $font;
-  @include media-laptop {
-    font-size: 24px;
-  }
-  @include media-tablet {
-    font-size: 18px;
-  }
-  h2 {
-    margin-bottom: inherit;
-    font: inherit;
-  }
-}
 .ui {
   &-button {
     display: inline-block;
@@ -136,8 +62,8 @@
       &::after {
         content: '';
         position: absolute;
-        left: 5px;
         top: 5px;
+        left: 5px;
         width: 10px;
         height: 10px;
         background-image: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5 3.5L4.5 7L9 1' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
@@ -146,6 +72,11 @@
         background-size: contain;
         opacity: 0;
         transition: 0.3s ease;
+      }
+      a {
+        display: inline;
+        text-decoration: underline;
+        color: teal;
       }
     }
     input[type='checkbox'] {
@@ -229,78 +160,6 @@
       border-radius: 4px;
       &.filled {
         padding: 5px 10px;
-      }
-    }
-  }
-  &-pagination {
-    display: flex;
-    justify-content: center;
-    &-item {
-      position: relative;
-      text-align: center;
-      width: 34px;
-      height: 34px;
-      font: 14px/34px $font;
-      color: $black;
-      background: #fff;
-      border-radius: 4px;
-      transition: 0.3s;
-      &:hover {
-        color: teal;
-        svg {
-          color: teal;
-        }
-      }
-      &.prev,
-      &.next {
-        background: teal;
-        &:hover {
-          background: #6ca44c;
-        }
-        &.disabled {
-          background: 0;
-          border: 1px solid #d6d6d6;
-          box-shadow: -6px -6px 12px rgba(255, 255, 255, 0.1);
-          cursor: default;
-          svg {
-            color: #d6d6d6;
-          }
-          &:hover {
-            svg {
-              color: #d6d6d6;
-            }
-          }
-        }
-        svg {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          width: 10px;
-          height: 14px;
-          color: #fff;
-        }
-      }
-      &.next {
-        svg {
-          transform: rotate(180deg) translate(50%, 50%);
-        }
-      }
-    }
-    ul {
-      display: flex;
-      margin: 0 20px;
-      li {
-        margin-right: 10px;
-        &:last-child {
-          margin-right: 0;
-        }
-        &.active {
-          a {
-            color: teal;
-            cursor: default;
-          }
-        }
       }
     }
   }

@@ -1,0 +1,72 @@
+.ui-pagination {
+  display: flex;
+  justify-content: center;
+  &-item {
+    position: relative;
+    text-align: center;
+    width: 34px;
+    height: 34px;
+    font: 14px/34px $font;
+    color: $black;
+    background: #fff;
+    border-radius: 4px;
+    transition: 0.3s;
+    &:hover {
+      color: teal;
+      svg {
+        color: teal;
+      }
+    }
+    &.prev,
+    &.next {
+      background: teal;
+      &:hover {
+        background: #6ca44c;
+      }
+      &.disabled {
+        background: 0;
+        border: 1px solid #d6d6d6;
+        box-shadow: -6px -6px 12px rgba(255, 255, 255, 0.1);
+        cursor: default;
+        svg {
+          color: #d6d6d6;
+        }
+        &:hover {
+          svg {
+            color: #d6d6d6;
+          }
+        }
+      }
+      svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 10px;
+        height: 14px;
+        color: #fff;
+      }
+    }
+    &.next {
+      svg {
+        transform: rotate(180deg) translate(50%, 50%);
+      }
+    }
+  }
+  ul {
+    display: flex;
+    margin: 0 20px;
+    li {
+      margin-right: 10px;
+      &:last-child {
+        margin-right: 0;
+      }
+      &.active {
+        a {
+          color: teal;
+          cursor: default;
+        }
+      }
+    }
+  }
+}

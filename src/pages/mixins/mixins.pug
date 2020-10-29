@@ -21,18 +21,18 @@ mixin sectionTitle(sectionTitle)
   .section_title
     h2=sectionTitle
 
-mixin ui-button(text, color, submit)
+mixin ui-button(text, color, submit, href)
   if submit
     .ui-button(class=color)
       input(type="submit", value=text)
   else
     .ui-button(class=color)
-      a(href="#")=text
+      a(href=href)=text
 
 mixin ui-checkbox(id, text)
   .ui-checkbox
     input(id=id type="checkbox" name=id)
-    label(for=id)=text
+    label(for=id)!=text
 
 mixin ui-input(text, id, r, type)
   if !type
