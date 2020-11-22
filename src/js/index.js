@@ -1,8 +1,8 @@
 import $ from 'jquery'
-import datepicker from 'js-datepicker'
+// import datepicker from 'js-datepicker'
 import '@fancyapps/fancybox'
 import Inputmask from 'inputmask'
-import noUiSlider from 'nouislider'
+// import noUiSlider from 'nouislider'
 import 'parsleyjs'
 import 'select2'
 import Swiper from 'swiper/bundle'
@@ -10,19 +10,18 @@ import 'tooltipster'
 import './_backend'
 
 $(function () {
-  selects()
+  uiSelects()
   inputMask()
   checkInputFill()
   validation()
   sliderInit()
 })
 
-function selects() {
+function uiSelects() {
   const selects = $('.ui-select select')
   selects.each(function () {
-    const
-      curr = $(this),
-      currWrap = curr.parent('.ui-select')
+    const curr = $(this)
+    const currWrap = curr.parent('.ui-select')
     curr.select2({
       minimumResultsForSearch: Infinity,
       width: 'auto',
@@ -54,7 +53,7 @@ function validation() {
 }
 
 function sliderInit() {
-  let swiperSlider = new Swiper('.swiper-container', {
+  const swiperSlider = new Swiper('.swiper-container', {
     speed: 400,
     spaceBetween: 100,
     pagination: {

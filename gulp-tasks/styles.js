@@ -1,17 +1,20 @@
 const gulp = require('gulp'),
   plumber = require('gulp-plumber'),
+  cached = require('gulp-cached'),
+  dependents = require('gulp-dependents'),
   gulpStylelint = require('gulp-stylelint'),
   sassGlob = require('gulp-sass-glob'),
   sass = require('gulp-sass'),
   autoprefixer = require('gulp-autoprefixer'),
-  shorthand = require('gulp-shorthand'),
   rename = require('gulp-rename'),
   cleanCSS = require('gulp-clean-css'),
   browsersync = require('browser-sync')
 
-module.exports = function styles() {
-  return gulp.src('src/styles/layouts/style.scss')
+function styleLint() {
+  return gulp.src('src/styles/**/*.scss')
     .pipe(plumber())
+    .pipe(cached('stylesCache'))
+    .pipe(dependents())
     .pipe(gulpStylelint({
       failAfterError: false,
       reporters: [
@@ -21,13 +24,18 @@ module.exports = function styles() {
         }
       ]
     }))
+}
+
+module.exports = function styles() {
+  styleLint()
+  return gulp.src('src/styles/layouts/style.scss')
+    .pipe(plumber())
     .pipe(sassGlob())
     .pipe(sass())
     .pipe(autoprefixer({
       cascade: false,
       grid: true
     }))
-    // .pipe(shorthand())
     .pipe(cleanCSS({
       compatibility: '*',
       level: 2,

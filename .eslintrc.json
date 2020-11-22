@@ -1,5 +1,6 @@
 {
   "env": {
+    "es6": true,
     "jquery": true
   },
   "overrides": [
@@ -10,6 +11,9 @@
         "htmlacademy/es6"
       ],
       "rules": {
+        "no-console": 0,
+        "no-invalid-this": "off",
+        "no-unused-vars": "off",
         "indent": [
           "error",
           2

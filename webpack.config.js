@@ -4,7 +4,7 @@ const path = require('path'),
 module.exports = {
   mode: process.env.NODE_ENV,
   entry: {
-    main: "./src/js/index.js",
+    main: './src/js/index.js',
   },
   output: {
     filename: 'scripts.js',

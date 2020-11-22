@@ -1,14 +1,14 @@
 extends layouts/layout
 
 block variables
-  -var pageTitle ='Main'
+  -const pageTitle ='Main'
 
 block content
   main
     .main-page
       .inner
         +breadcrumbs('Main', 'News')
-        +pageTitle('Main')
+        +pageTitle(pageTitle)
         section.slider
           +sectionTitle('Slider')
           .swiper-container
