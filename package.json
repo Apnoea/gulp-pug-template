@@ -1,6 +1,6 @@
 {
   "name": "gulp-pug-template",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "simple pug+scss template",
   "main": "gulpfile.js",
   "scripts": {
@@ -39,6 +39,7 @@
     "gulp-clean-css": "^4.3.0",
     "gulp-dependents": "^1.2.5",
     "gulp-eslint7": "^0.3.0",
+    "gulp-filter": "^6.0.0",
     "gulp-imagemin": "^7.1.0",
     "gulp-plumber": "^1.2.1",
     "gulp-pug": "^4.0.1",
