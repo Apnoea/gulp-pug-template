@@ -1,8 +1,8 @@
 import $ from 'jquery'
-// import datepicker from 'js-datepicker'
+import datepicker from 'js-datepicker'
 import '@fancyapps/fancybox'
 import Inputmask from 'inputmask'
-// import noUiSlider from 'nouislider'
+import noUiSlider from 'nouislider'
 import 'parsleyjs'
 import 'select2'
 import Swiper from 'swiper/bundle'
@@ -39,6 +39,7 @@ function inputMask() {
 }
 
 function checkInputFill() {
+  $('.ui-input input').val('')
   $('input').on('change', function () {
     if ($(this).val() !== '') {
       $(this).addClass('filled')

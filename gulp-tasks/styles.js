@@ -3,6 +3,7 @@ const gulp = require('gulp'),
   cached = require('gulp-cached'),
   dependents = require('gulp-dependents'),
   gulpStylelint = require('gulp-stylelint'),
+  filter = require('gulp-filter'),
   sassGlob = require('gulp-sass-glob'),
   sass = require('gulp-sass'),
   autoprefixer = require('gulp-autoprefixer'),
@@ -10,38 +11,22 @@ const gulp = require('gulp'),
   cleanCSS = require('gulp-clean-css'),
   browsersync = require('browser-sync')
 
-function styleLint() {
+module.exports = function styles() {
   return gulp.src('src/styles/**/*.scss')
     .pipe(plumber())
     .pipe(cached('stylesCache'))
     .pipe(dependents())
     .pipe(gulpStylelint({
       failAfterError: false,
-      reporters: [
-        {
-          formatter: 'string',
-          console: true
-        }
-      ]
+      reporters: [ { formatter: 'string', console: true } ]
     }))
-}
-
-module.exports = function styles() {
-  styleLint()
-  return gulp.src('src/styles/layouts/style.scss')
-    .pipe(plumber())
+    .pipe(filter('src/styles/layouts/style.scss'))
     .pipe(sassGlob())
     .pipe(sass())
-    .pipe(autoprefixer({
-      cascade: false,
-      grid: true
-    }))
-    .pipe(cleanCSS({
-      compatibility: '*',
-      level: 2,
-    }))
-    .pipe(rename({ suffix: '.min' }))
+    .pipe(autoprefixer({ cascade: false, grid: true }))
+    .pipe(cleanCSS({ compatibility: '*', level: 2 }))
+    .pipe(rename({ dirname: 'css', suffix: '.min' }))
     .pipe(plumber.stop())
-    .pipe(gulp.dest('build/css'))
+    .pipe(gulp.dest('build'))
     .pipe(browsersync.stream())
 }

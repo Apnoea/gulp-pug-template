@@ -6,11 +6,11 @@ module.exports = function svgSprite() {
   return gulp.src('src/images/**/*.svg')
     .pipe(svg({
       shape: {
-        dest: "svgs"
+        dest: 'svgs'
       },
       mode: {
         stack: {
-          sprite: "../sprite.svg"
+          sprite: '../sprite.svg'
         }
       }
     }))

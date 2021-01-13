@@ -13,17 +13,8 @@ module.exports = function pug2html() {
     .pipe(plumber())
     .pipe(cached('pugCache'))
     .pipe(dependents({
-      ".pug": {
-        parserSteps: [
-          /^\s*(?:extends|include)\s+(.+?)\s*$/gm,
-          function (str) {
-            var absolute = str.match(/^[\\/]+(.+)/);
-            if (absolute) {
-              str = path.resolve('src/pages', absolute[1]);
-            }
-            return [str];
-          }
-        ],
+      '.pug': {
+        parserSteps: [/^\s*(?:extends|include)\s+(.+?)\s*$/gm],
         postfixes: ['.pug', '.jade']
       }
     }))

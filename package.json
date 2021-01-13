@@ -1,6 +1,6 @@
 {
   "name": "gulp-pug-template",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "simple pug+scss template",
   "main": "gulpfile.js",
   "scripts": {
@@ -19,13 +19,13 @@
     "url": "https://github.com/Apnoea/gulp-pug-template.git"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.7",
-    "@babel/preset-env": "^7.12.7",
-    "babel-loader": "^8.2.1",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "babel-loader": "^8.2.2",
     "browser-sync": "^2.26.13",
-    "cross-env": "^7.0.2",
+    "cross-env": "^7.0.3",
     "del": "^6.0.0",
-    "eslint": "^7.12.1",
+    "eslint": "^7.17.0",
     "eslint-config-htmlacademy": "^0.6.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.22.1",
@@ -66,12 +66,12 @@
     "@fancyapps/fancybox": "^3.5.7",
     "inputmask": "^5.0.5",
     "jquery": "^3.5.1",
-    "js-datepicker": "^5.16.0",
+    "js-datepicker": "^5.18.0",
     "normalize.css": "^8.0.1",
     "nouislider": "^14.6.3",
     "parsleyjs": "^2.9.2",
     "select2": "^4.0.13",
-    "swiper": "^6.3.5",
+    "swiper": "^6.4.5",
     "tooltipster": "^4.2.8"
   }
 }
