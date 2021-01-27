@@ -1,10 +1,10 @@
-const path = require('path'),
-  webpack = require('webpack')
+const path = require('path')
+const webpack = require('webpack')
 
 module.exports = {
   mode: process.env.NODE_ENV,
   entry: {
-    main: './src/js/index.js',
+    main: './src/js/index.js'
   },
   output: {
     filename: 'scripts.js',

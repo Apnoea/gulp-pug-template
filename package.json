@@ -1,12 +1,12 @@
 {
   "name": "gulp-pug-template",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "simple pug+scss template",
   "main": "gulpfile.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=development gulp start",
-    "script": "cross-env NODE_ENV=production gulp script",
-    "build": "cross-env NODE_ENV=production gulp build"
+    "start": "cross-env NODE_ENV=development gulp development",
+    "build": "cross-env NODE_ENV=production gulp production",
+    "script": "cross-env NODE_ENV=production gulp script"
   },
   "browserslist": [
     "> 5%",
@@ -22,16 +22,17 @@
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
     "babel-loader": "^8.2.2",
-    "browser-sync": "^2.26.13",
+    "browser-sync": "^2.26.14",
     "cross-env": "^7.0.3",
     "del": "^6.0.0",
-    "eslint": "^7.17.0",
-    "eslint-config-htmlacademy": "^0.6.0",
+    "eslint": "^7.18.0",
+    "eslint-config-htmlacademy": "^2.0.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.1.0",
+    "eslint-plugin-sonarjs": "^0.5.0",
+    "eslint-plugin-unicorn": "^27.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-cached": "^1.1.1",
@@ -49,10 +50,10 @@
     "gulp-sass-glob": "^1.1.0",
     "gulp-stylelint": "^13.0.0",
     "gulp-svg-sprite": "^1.5.0",
-    "gulp-w3c-html-validator": "^2.0.0",
+    "gulp-w3c-html-validator": "2.0.0",
     "imagemin-pngquant": "^9.0.0",
     "pug": "^3.0.0",
-    "stylelint": "^13.8.0",
+    "stylelint": "^13.9.0",
     "stylelint-config-htmlacademy": "^0.1.4",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-config-standard-scss": "^1.1.0",
@@ -60,7 +61,7 @@
     "stylelint-scss": "^3.16.0",
     "svg4everybody": "^2.1.9",
     "webpack": "^4.44.1",
-    "webpack-stream": "^6.1.0"
+    "webpack-stream": "^6.1.2"
   },
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
@@ -71,7 +72,7 @@
     "nouislider": "^14.6.3",
     "parsleyjs": "^2.9.2",
     "select2": "^4.0.13",
-    "swiper": "^6.4.5",
+    "swiper": "^6.4.8",
     "tooltipster": "^4.2.8"
   }
 }

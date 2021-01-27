@@ -1,10 +1,10 @@
-const gulp = require('gulp'),
-  changed = require('gulp-changed'),
-  imagemin = require('gulp-imagemin'),
-  imageminPngquant = require('imagemin-pngquant'),
-  browsersync = require('browser-sync')
+const gulp = require('gulp')
+const changed = require('gulp-changed')
+const imagemin = require('gulp-imagemin')
+const imageminPngquant = require('imagemin-pngquant')
+const browsersync = require('browser-sync')
 
-module.exports = function imageMinify() {
+module.exports = function images () {
   return gulp.src('src/images/**/*.{gif,png,jpg,webp}')
     .pipe(changed('build/img'))
     .pipe(imagemin([

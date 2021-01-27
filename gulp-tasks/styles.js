@@ -1,24 +1,24 @@
-const gulp = require('gulp'),
-  plumber = require('gulp-plumber'),
-  cached = require('gulp-cached'),
-  dependents = require('gulp-dependents'),
-  gulpStylelint = require('gulp-stylelint'),
-  filter = require('gulp-filter'),
-  sassGlob = require('gulp-sass-glob'),
-  sass = require('gulp-sass'),
-  autoprefixer = require('gulp-autoprefixer'),
-  rename = require('gulp-rename'),
-  cleanCSS = require('gulp-clean-css'),
-  browsersync = require('browser-sync')
+const gulp = require('gulp')
+const plumber = require('gulp-plumber')
+const cached = require('gulp-cached')
+const dependents = require('gulp-dependents')
+const gulpStylelint = require('gulp-stylelint')
+const filter = require('gulp-filter')
+const sassGlob = require('gulp-sass-glob')
+const sass = require('gulp-sass')
+const autoprefixer = require('gulp-autoprefixer')
+const rename = require('gulp-rename')
+const cleanCSS = require('gulp-clean-css')
+const browsersync = require('browser-sync')
 
-module.exports = function styles() {
+module.exports = function styles () {
   return gulp.src('src/styles/**/*.scss')
     .pipe(plumber())
     .pipe(cached('stylesCache'))
     .pipe(dependents())
     .pipe(gulpStylelint({
       failAfterError: false,
-      reporters: [ { formatter: 'string', console: true } ]
+      reporters: [{ formatter: 'string', console: true }]
     }))
     .pipe(filter('src/styles/layouts/style.scss'))
     .pipe(sassGlob())

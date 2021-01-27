@@ -1,5 +1,3 @@
-@import '../utils/variables';
-
 @mixin media-desktop {
   @media (max-width: $mediaWidthDesktop) {
     @content;

@@ -17,28 +17,28 @@ $(function () {
   sliderInit()
 })
 
-function uiSelects() {
+function uiSelects () {
   const selects = $('.ui-select select')
   selects.each(function () {
-    const curr = $(this)
-    const currWrap = curr.parent('.ui-select')
-    curr.select2({
-      minimumResultsForSearch: Infinity,
+    const current = $(this)
+    const currentWrap = current.parent('.ui-select')
+    current.select2({
+      minimumResultsForSearch: Number.POSITIVE_INFINITY,
       width: 'auto',
       dropdownAutoWidth: true,
-      dropdownParent: currWrap
+      dropdownParent: currentWrap
     })
   })
 }
 
-function inputMask() {
+function inputMask () {
   Inputmask({
-    'mask': '+7 (999) 999-99-99',
-    'showMaskOnHover': false
+    mask: '+7 (999) 999-99-99',
+    showMaskOnHover: false
   }).mask('#phone')
 }
 
-function checkInputFill() {
+function checkInputFill () {
   $('.ui-input input').val('')
   $('input').on('change', function () {
     if ($(this).val() !== '') {
@@ -49,21 +49,21 @@ function checkInputFill() {
   })
 }
 
-function validation() {
+function validation () {
   $('form').parsley()
 }
 
-function sliderInit() {
+function sliderInit () {
   const swiperSlider = new Swiper('.swiper-container', {
     speed: 400,
     spaceBetween: 100,
     pagination: {
       el: '.swiper-pagination',
-      type: 'bullets',
+      type: 'bullets'
     },
     navigation: {
       nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
+      prevEl: '.swiper-button-prev'
+    }
   })
 }

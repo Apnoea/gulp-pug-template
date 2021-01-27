@@ -1,14 +1,14 @@
-const gulp = require('gulp'),
-  plumber = require('gulp-plumber'),
-  pugLinter = require('gulp-pug-linter'),
-  filter = require('gulp-filter'),
-  pug = require('gulp-pug'),
-  cached = require('gulp-cached'),
-  dependents = require('gulp-dependents'),
-  htmlValidator = require('gulp-w3c-html-validator'),
-  browsersync = require('browser-sync')
+const gulp = require('gulp')
+const plumber = require('gulp-plumber')
+const pugLinter = require('gulp-pug-linter')
+const filter = require('gulp-filter')
+const pug = require('gulp-pug')
+const cached = require('gulp-cached')
+const dependents = require('gulp-dependents')
+const htmlValidator = require('gulp-w3c-html-validator')
+const browsersync = require('browser-sync')
 
-module.exports = function pug2html() {
+module.exports = function pug2html () {
   return gulp.src('src/pages/**/*.pug')
     .pipe(plumber())
     .pipe(cached('pugCache'))

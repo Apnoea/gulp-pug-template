@@ -1,17 +1,15 @@
-const gulp = require('gulp'),
-  pug2html = require('./gulp-tasks/pug2html'),
-  styles = require('./gulp-tasks/styles'),
-  script = require('./gulp-tasks/script'),
-  fonts = require('./gulp-tasks/fonts'),
-  imageMinify = require('./gulp-tasks/imageMinify'),
-  svgSprite = require('./gulp-tasks/svgSprite'),
-  clean = require('./gulp-tasks/clean'),
-  serve = require('./gulp-tasks/serve')
+const gulp = require('gulp')
+const pug2html = require('./gulp-tasks/pug2html')
+const styles = require('./gulp-tasks/styles')
+const scripts = require('./gulp-tasks/scripts')
+const fonts = require('./gulp-tasks/fonts')
+const images = require('./gulp-tasks/images')
+const svgs = require('./gulp-tasks/svgs')
+const clean = require('./gulp-tasks/clean')
+const serve = require('./gulp-tasks/serve')
 
-const dev = gulp.parallel(pug2html, styles, script, fonts, imageMinify, svgSprite)
+const build = gulp.series(clean, gulp.parallel(pug2html, styles, scripts, fonts, images, svgs))
 
-const build = gulp.series(clean, dev)
-
-module.exports.start = gulp.series(build, serve)
-module.exports.script = gulp.series(clean, script)
-module.exports.build = build
+module.exports.development = gulp.series(build, serve)
+module.exports.production = build
+module.exports.script = gulp.series(clean, scripts)
