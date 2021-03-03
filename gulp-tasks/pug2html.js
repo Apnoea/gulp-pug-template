@@ -1,10 +1,10 @@
 const gulp = require('gulp')
 const plumber = require('gulp-plumber')
+const cached = require('gulp-cached')
+const dependents = require('gulp-dependents')
 const pugLinter = require('gulp-pug-linter')
 const filter = require('gulp-filter')
 const pug = require('gulp-pug')
-const cached = require('gulp-cached')
-const dependents = require('gulp-dependents')
 const htmlValidator = require('gulp-w3c-html-validator')
 const browsersync = require('browser-sync')
 
