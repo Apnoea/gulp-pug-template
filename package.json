@@ -72,7 +72,7 @@
     "nouislider": "^14.6.3",
     "parsleyjs": "^2.9.2",
     "select2": "^4.0.13",
-    "swiper": "^6.4.15",
+    "swiper": "^6.5.1",
     "tooltipster": "^4.2.8"
   }
 }
