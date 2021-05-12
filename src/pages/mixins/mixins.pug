@@ -11,7 +11,7 @@ mixin breadcrumbs( ...list)
           if index === list.length - 1
             span=item
           else
-            a.breadcrumbs-block-item-link(href="/")=item
+            a.breadcrumbs-block-item-link(href='/')=item
 
 mixin pageTitle(pageTitle)
   .page_title
@@ -24,20 +24,20 @@ mixin sectionTitle(sectionTitle)
 mixin ui-button(text, color, submit, href)
   if submit
     .ui-button(class=color)
-      input(type="submit", value=text)
+      input(type='submit', value=text)
   else
     .ui-button(class=color)
       a(href=href)=text
 
 mixin ui-checkbox(id, text)
   .ui-checkbox
-    input(id=id type="checkbox" name=id)
+    input(id=id type='checkbox' name=id)
     label(for=id)!=text
 
 mixin ui-input(text, id, r, type)
   if !type
     .ui-input
-      input(id=id type="text")
+      input(id=id type='text')
       label(for=id)=text
   else if r
     .ui-input

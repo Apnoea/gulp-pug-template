@@ -6,7 +6,7 @@ const scripts = require('./scripts')
 const pug2html = require('./pug2html')
 const server = require('browser-sync')
 
-module.exports = function serve (cb) {
+module.exports = function serve(cb) {
   server.init({
     server: 'build',
     notify: false,

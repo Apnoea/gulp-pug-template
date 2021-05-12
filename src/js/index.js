@@ -17,7 +17,7 @@ $(function () {
   sliderInit()
 })
 
-function uiSelects () {
+function uiSelects() {
   const selects = $('.ui-select select')
   selects.each(function () {
     const current = $(this)
@@ -31,14 +31,14 @@ function uiSelects () {
   })
 }
 
-function inputMask () {
+function inputMask() {
   Inputmask({
     mask: '+7 (999) 999-99-99',
     showMaskOnHover: false
   }).mask('#phone')
 }
 
-function checkInputFill () {
+function checkInputFill() {
   $('.ui-input input').val('')
   $('input').on('change', function () {
     if ($(this).val() !== '') {
@@ -49,11 +49,11 @@ function checkInputFill () {
   })
 }
 
-function validation () {
+function validation() {
   $('form').parsley()
 }
 
-function sliderInit () {
+function sliderInit() {
   const swiperSlider = new Swiper('.swiper-container', {
     speed: 400,
     spaceBetween: 100,
