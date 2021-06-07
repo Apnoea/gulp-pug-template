@@ -80,7 +80,7 @@ body {
             &-link {
               color: #575757;
               &:hover {
-                color: red;
+                color: $orange;
               }
             }
             span {
@@ -141,7 +141,7 @@ a {
   color: $black;
   transition: ease 0.3s;
   &:hover {
-    color: teal;
+    color: $teal;
   }
 }
 ul {

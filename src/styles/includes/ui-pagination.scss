@@ -12,14 +12,14 @@
     border-radius: 4px;
     transition: 0.3s;
     &:hover {
-      color: teal;
+      color: $teal;
       svg {
-        color: teal;
+        color: $teal;
       }
     }
     &.prev,
     &.next {
-      background: teal;
+      background: $teal;
       &:hover {
         background: #6ca44c;
       }
@@ -63,7 +63,7 @@
       }
       &.active {
         a {
-          color: teal;
+          color: $teal;
           cursor: default;
         }
       }
